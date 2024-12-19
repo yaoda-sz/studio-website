@@ -1,0 +1,31 @@
+/* 音乐播放器按钮 */
+#playButton {
+    position: fixed;
+    top: 90%;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border: 3px solid #ffffff00;
+    border-radius: 50%;
+    background-color: rgba(168, 168, 168, 0.842);
+    box-shadow: 0 0 2px 2px rgba(255, 255, 255, 0.836);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+    line-height: 50px;
+    z-index: 5;    
+}
+
+#playButton.paused::before {
+    content: '🎵';
+    font-size: 14px;          
+    color: #000000;
+}
+
+#playButton.playing::before {
+    content: '⏸';
+    font-size: 14px;          
+    color: rgb(163, 0, 0);
+}

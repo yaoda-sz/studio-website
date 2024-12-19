@@ -1,0 +1,83 @@
+/* 客户案例区块 */
+.banner-top{
+    height: 80px;
+}
+.box-title {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 40px;
+}
+
+.anli>h2 {
+    font-size: 2.2rem;
+    margin-top: 10px;
+    color: white;
+}
+
+.box-title hr {
+    width: 100%;
+    border: none;
+    height: 1px;
+    background-color: hsla(0, 0%, 43%, 0.4);
+    margin: 0 0 30px;
+}
+
+.anli {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.anli p {
+    color: #ccc;
+    margin-bottom: 40px;
+}
+
+.video-container {
+    position: relative;
+    width: 100%; /* 确保父容器宽度为100% */
+    height: 0; /* 设置高度为0，通过padding-bottom保持宽高比 */
+    padding-bottom: 56.25%; /* 16:9的宽高比 (9 / 16 * 100) */
+    overflow: hidden; /* 隐藏超出部分的内容 */
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
+    margin-bottom: 0px;
+    z-index: 1;
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 保证视频覆盖整个容器，可能会裁剪视频 */
+}
+.card-items{
+    width: 100%;
+}
+.card-list{
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+.card-v{
+    width: 100%;;
+    aspect-ratio: 1/1;
+    position: relative;
+    overflow: hidden; /* 隐藏超出部分的内容 */
+}
+.card-v video{
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    width: 100%;
+    height: auto;
+}
+
