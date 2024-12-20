@@ -16,7 +16,7 @@
 
 }
 
-/* 窗口适配768px-900px */
+/* 当页面窗口屏幕尺寸适配小于768px-900px情况下执行样式 */
 @media (max-width: 900px) {
   header .container nav {
     display: none;
@@ -24,14 +24,15 @@
 
   .container,
   #main {
-    max-width: 820px;
+    max-width: 900px;
+    width: 100vw;
   }
 
   header>.container {
     padding: 10px 20px;
   }
 
-  #main .box-s {
+  .box-s {
     max-width: 43%;
     min-width: 250px;
   }
@@ -99,14 +100,12 @@
   }
 }
 
-/* 窗口适配576px-767px */
+/* 当页面窗口屏幕尺寸适配小于576px-767px 情况下执行样式 */
 @media (max-width: 767px) {
-  header>.container {
-    width: 100%;
-    margin: 0;
-  }
+
   .img-dalao h3 {
     font-size: 1.2rem;
+
   }
 
   .img-dalao p {
@@ -121,7 +120,7 @@
 
   .box-s {
     padding: 30px 0 50px;
-    max-width: 48%;
+    max-width: 46%;
     min-width: 180px;
   }
 
@@ -153,9 +152,8 @@
     right: -10px;
   }
 
-  #main .yaoda .box-me .right-me .title {
+  #main .yaoda .box-me .right-me .about-title {
     transform: scale(0.9);
-    position: absolute;
     top: -35px;
     right: -20px;
   }
@@ -168,9 +166,8 @@
   }
 }
 
-/* 窗口适配576以下 */
+/* 当页面窗口屏幕尺寸适配小于576px情况下执行样式 */
 @media (max-width: 575px) {
-
   .banner {
     display: flex;
     background-size: auto;
@@ -193,10 +190,22 @@
     padding: 0;
   }
 
+  .box-s {
+    padding: 30px 10px 50px;
+    max-width: 100%;
+
+  }
+  .box-s>.card-v {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
   .box-w .box-img {
     width: 80vw;
     margin: 0 auto;
   }
+
+
 
   .why .box-w .box-son {
     max-width: calc(100%);
@@ -204,10 +213,6 @@
 
   .img-dalao h3 {
     font-size: 1.6rem;
-  }
-
-  .img-dalao p {
-    font-size: 1rem;
   }
 
   .img-dalao a {
@@ -220,11 +225,9 @@
     background-color: rgb(24, 182, 255);
     padding: 10px 36px;
   }
-  #main{
+
+  #main {
     width: 100vw;
-  }
-  #main .box-s {
-    max-width: 80%;
   }
 
   #main .yaoda .box-me {
@@ -232,9 +235,10 @@
     flex-wrap: wrap;
     flex-direction: column;
     padding: 10px;
-    gap: 40px;
+    gap: 20px;
     ;
   }
+
   #main .yaoda .box-me .right-me {
     display: flex;
     flex-direction: column;
@@ -248,9 +252,14 @@
     gap: 20px;
   }
 
-  .yaoda .box-me p {
-    font-size: 1.1rem;
-    line-height: 1.8rem;
+  .yaoda .about-title>h2 {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .yaoda .about-title>h3 {
+    font-size: 1.2rem;
+    color: #dadada;
   }
 
   footer .contact-info {
